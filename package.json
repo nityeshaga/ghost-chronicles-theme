@@ -2,7 +2,7 @@
     "name": "chronicles",
     "description": "A custom theme for Chronicles of Nityesh blog",
     "demo": "https://nityesh.com",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "engines": {
         "ghost": ">=5.0.0"
     },
