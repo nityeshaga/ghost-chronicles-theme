@@ -15,14 +15,35 @@
 
         <main class="gh-main">
             <div class="gh-feed">
-                {{!-- Using #get helper to fetch all posts --}}
-                {{#get "posts" limit="all" include="tags"}}
+                {{!-- Use different logic based on context --}}
+                {{#is "home"}}
+                    {{!-- On home page, get all posts for filtering --}}
+                    {{#get "posts" limit="all" include="tags"}}
+                        {{#foreach posts}}
+                            <article class="post-list-item" data-tags="{{#foreach tags}}{{slug}}{{#unless @last}} {{/unless}}{{/foreach}}">
+                                {{!-- Post content here --}}
+                                <div class="post-content">
+                                    <h2 class="post-title"><a href="{{url}}">{{title}}</a></h2>
+                                    <p class="post-excerpt">{{excerpt characters="140"}}</p>
+                                    <time class="post-date">{{date format="D MMMM, YYYY"}}</time>
+                                </div>
+                                {{#if feature_image}}
+                                    <div class="post-image">
+                                        <img src="{{feature_image}}" alt="{{title}}">
+                                    </div>
+                                {{/if}}
+                            </article>
+                        {{/foreach}}
+                    {{/get}}
+                {{else}}
+                    {{!-- On tag pages, use the provided posts --}}
                     {{#foreach posts}}
                         <article class="post-list-item" data-tags="{{#foreach tags}}{{slug}}{{#unless @last}} {{/unless}}{{/foreach}}">
+                            {{!-- Post content here --}}
                             <div class="post-content">
-                                <time class="post-date">{{date format="D MMMM, YYYY"}}</time>
                                 <h2 class="post-title"><a href="{{url}}">{{title}}</a></h2>
                                 <p class="post-excerpt">{{excerpt characters="140"}}</p>
+                                <time class="post-date">{{date format="D MMMM, YYYY"}}</time>
                             </div>
                             {{#if feature_image}}
                                 <div class="post-image">
@@ -31,7 +52,7 @@
                             {{/if}}
                         </article>
                     {{/foreach}}
-                {{/get}}
+                {{/is}}
             </div>
         </main>
     </div>
