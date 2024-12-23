@@ -3,6 +3,29 @@
 
 {{> "components/header" headerStyle=@custom.header_style}}
 
+<section class="about-preview">
+    {{#get "pages" filter="slug:about" limit="1" as |about|}}
+        {{#if about}}
+            {{#foreach about}}
+                <div class="about-content">
+                    <div class="about-image">
+                        {{#if feature_image}}
+                            <img src="{{feature_image}}" alt="{{title}}">
+                        {{/if}}
+                    </div>
+                    <div class="about-text">
+                        {{! Using excerpt will automatically grab content before the first divider }}
+                        {{ content }}
+                        
+                        <a href="{{@site.url}}/about-me" class="about-cta">Why I do what I do</a>
+                    </div>
+                </div>
+            {{/foreach}}
+        {{/if}}
+    {{/get}}
+</section>
+
+
 {{#match @custom.header_style "!=" "Highlight"}}
     {{> "components/featured" showFeatured=@custom.show_featured_posts limit=4}}
 {{/match}}
