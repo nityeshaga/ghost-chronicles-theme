@@ -1,8 +1,8 @@
 {
-    "name": "source",
-    "description": "A default theme for the Ghost publishing platform",
-    "demo": "https://source.ghost.io",
-    "version": "1.4.1",
+    "name": "chronicles",
+    "description": "A custom theme for Chronicles of Nityesh blog",
+    "demo": "https://nityesh.com",
+    "version": "1.0.0",
     "engines": {
         "ghost": ">=5.0.0"
     },
@@ -18,9 +18,9 @@
         "postship": "git fetch && gulp release"
     },
     "author": {
-        "name": "Ghost Foundation",
-        "email": "hello@ghost.org",
-        "url": "https://ghost.org/"
+        "name": "Nityesh Agarwal",
+        "email": "nityesh@hey.com",
+        "url": "https://nityesh.com/"
     },
     "gpm": {
         "type": "theme",
