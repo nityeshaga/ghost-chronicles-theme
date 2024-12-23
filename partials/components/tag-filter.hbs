@@ -1,0 +1,8 @@
+<nav class="tag-filter">
+    <button class="tag-filter-item active" data-tag="all">Latest</button>
+    {{#get "tags" limit="all"}}
+        {{#foreach tags}}
+            <button class="tag-filter-item" data-tag="{{slug}}">{{name}}</button>
+        {{/foreach}}
+    {{/get}}
+</nav>

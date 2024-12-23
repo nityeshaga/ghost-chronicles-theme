@@ -1477,6 +1477,172 @@ Search                         LOGO                    Login Subscribe
     }
 }
 
+/* 8.5. Posts list
+/* ---------------------------------------------------------- */
+
+/* Tag filter navigation */
+.tag-filter {
+    width: 100%;
+    max-width: 800px; /* or whatever width feels right for your design */
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 4rem;
+    flex-wrap: wrap;
+}
+
+.tag-filter-item {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-primary-text);
+    padding: 0.8rem 1.6rem;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    font-size: 1.6rem;
+}
+
+.tag-filter-item.active {
+    border: 1.5px solid #333;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.tag-filter-item:hover:not(.active) {
+    background-color: rgba(0, 0, 0, 0.03);
+    color: #666;
+}
+
+/* Post list styling */
+.post-list-container {
+    background-color: rgb(251, 247, 240); /* Subtle cream background */
+    padding: 4rem 8rem;
+    margin-left: 20rem;
+    margin-right: 20rem;
+}
+
+.post-list-container .gh-container-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.post-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Changed from center for better alignment */
+    padding: 2rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* More subtle divider */
+}
+
+.post-list-item:last-child {
+    border-bottom: none;
+}
+
+.post-content {
+    flex: 1;
+    padding-right: 4rem;
+}
+
+.post-title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.post-title a {
+    color: var(--color-primary-text);
+    text-decoration: none;
+}
+
+.post-title a:hover {
+    color: #666;
+}
+
+.post-excerpt {
+    font-size: 1.4rem;
+    color: #666
+}
+
+.post-date {
+    font-size: 1.4rem;
+    color: #888;
+    font-weight: 400;
+}
+
+.post-image {
+    flex: 0 0 200px;
+}
+
+.post-image img {
+    width: 200px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .tag-filter {
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .tag-filter-item {
+        padding: 0.6rem 1.5rem;
+        font-size: 1.4rem;
+    }
+
+    .post-list-container {
+        /* Remove fixed margins and use percentage or smaller values */
+        margin-left: 0;
+        margin-right: 0;
+        /* Reduce padding to prevent content cutoff */
+        padding: 2rem 1.5rem;
+    }
+
+    .post-list-container .gh-container-inner {
+        padding: 0; /* Remove additional padding */
+    }
+
+    .post-list-item {
+        flex-direction: column;
+        padding: 2rem 0;
+    }
+
+    .post-content {
+        padding-right: 0;
+        padding-bottom: 1.5rem;
+        /* Ensure content doesn't overflow */
+        width: 100%;
+    }
+
+    .post-title {
+        /* Slightly reduce font size on mobile */
+        font-size: 1.8rem;
+        /* Ensure proper word wrapping */
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .post-excerpt {
+        /* Ensure text wraps properly */
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .post-image {
+        width: 100%;
+    }
+
+    .post-image img {
+        width: 100%;
+        height: 200px;
+    }
+}
+
 /* 9. CTA
 /* ---------------------------------------------------------- */
 
@@ -2248,7 +2414,6 @@ unless a heading is the very first element in the post content */
 .has-serif-body:not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-content > ol,
 .has-serif-body:not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-content > ul,
 .has-serif-body:not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-content > dl,
-.has-serif-body:not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-content > p,
 .has-serif-body:not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-content .kg-callout-text,
 .has-serif-body:not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-content .kg-toggle-content > ol,
 .has-serif-body:not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .gh-content .kg-toggle-content > ul,

@@ -1,0 +1,23 @@
+you are a senior developer who is an expert at creating Ghost custom themes according to requirements of your clients. using your skills you can build the perfect custom looking blog for anyone using Ghost.
+
+i'm trying to build a custom theme for my Ghost blog hosted on digital ocean. i need your help in making the website completely customised according to my vision. 
+
+wherever possible, i want to use the dashboard settings available. but otherwise i want to use the customisation options available while writing the ghost custom theme. 
+
+i want to keep the website clean and yet aesthetic. i don't want to use colours only as accent- otherwise i love the white. i also want the user to have a great reading experience - which ghost does by default. 
+
+about website:
+
+- name - chronicles of nityesh
+- ghost version - v4
+- template starting point - Source template by Ghost. here's it's README file @README.md 
+
+about me:
+
+- i'm a ruby on rails developer completely new to the javascript ecosystem
+- i've installed ghost cli on my local machine for developing the custom theme
+- i'm comfortable with writing embedded html pages. i think handlebar is similar to the erb format of rails
+
+---
+
+do you understand this task and what i'm asking of you?
