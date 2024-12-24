@@ -2,6 +2,18 @@
 
 This is a custom theme developed on top of the default Source theme for [Ghost](http://github.com/tryghost/ghost/). This is the latest development version of Chronicles! See a live demo at [Nityesh.com](https://www.nityesh.com/)
 
+# Features
+
+1. It uses an about Page to show the above the fold info on the website. To do this, create a Page with `/about` as slug. Theme will pull in the content and put it on the front page. If you add a featured image to the `/about` Page, it will show that in a 2-column layout like in demo.
+
+2. The post list on the home page allows filtering posts by tags. 
+
+3. Footer says "My current shenanigans:"
+
+4. And I've removed the search bar and featured post functionality.
+
+You can grab the latest zip file from `dist/chronicles` folder. Or fork this repo to customise this theme further.
+
 &nbsp;
 
 # First time using a Ghost theme?
